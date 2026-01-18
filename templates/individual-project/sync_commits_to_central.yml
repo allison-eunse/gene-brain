@@ -1,0 +1,115 @@
+# Sync Commits to Central Hub
+# 
+# This workflow runs on every push and updates the central Gene-Brain hub
+# with the latest commit metadata from this project repository.
+#
+# SETUP:
+# 1. Copy this file to your project repo's .github/workflows/ directory
+# 2. Create a secret named BIG_REPO_TOKEN with a PAT that has write access
+#    to the central repo (allison-eunse/gene-brain)
+# 3. Optionally, update BIG_REPO below if the central repo name changes
+
+name: Sync Commits to Central
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+env:
+  BIG_REPO: allison-eunse/gene-brain
+  ROLLING_WINDOW: 50
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout this repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: ${{ env.ROLLING_WINDOW }}
+
+      - name: Generate commits.json
+        id: generate
+        run: |
+          # Compute KEY from GitHub context
+          KEY="${GITHUB_REPOSITORY_OWNER}__${GITHUB_REPOSITORY#*/}"
+          echo "KEY=$KEY" >> $GITHUB_OUTPUT
+          
+          python3 - <<'PY'
+          import json
+          import os
+          import subprocess
+          from datetime import datetime
+          
+          rolling = int(os.environ.get("ROLLING_WINDOW", "50"))
+          fmt = "%h%x1f%s%x1f%aI"
+          out = subprocess.check_output(
+              ["git", "log", "-n", str(rolling), f"--pretty=format:{fmt}"],
+              text=True
+          )
+          
+          commits = []
+          for line in out.splitlines():
+              sha, msg, ts = line.split("\x1f")
+              msg = msg.replace("\n", " ").strip()[:120]
+              commits.append({
+                  "sha_short": sha,
+                  "message": msg,
+                  "committed_at": ts
+              })
+          
+          payload = {
+              "owner": os.environ["GITHUB_REPOSITORY_OWNER"],
+              "repo": os.environ["GITHUB_REPOSITORY"].split("/", 1)[1],
+              "updated_at": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+              "commits": commits
+          }
+          
+          with open("commits.json", "w", encoding="utf-8") as f:
+              json.dump(payload, f, ensure_ascii=False, indent=2)
+          PY
+          
+          echo "Generated commits.json:"
+          cat commits.json
+
+      - name: Clone central repo
+        run: |
+          git clone --depth=1 https://x-access-token:${{ secrets.BIG_REPO_TOKEN }}@github.com/${{ env.BIG_REPO }}.git central-repo
+
+      - name: Update commits in central repo
+        run: |
+          KEY="${{ steps.generate.outputs.KEY }}"
+          mkdir -p central-repo/site/data/$KEY
+          cp commits.json central-repo/site/data/$KEY/commits.json
+
+      - name: Commit and push to central repo
+        run: |
+          cd central-repo
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          git add site/data/
+          
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          
+          KEY="${{ steps.generate.outputs.KEY }}"
+          git commit -m "chore: update commits for $KEY"
+          
+          # Retry logic for concurrent pushes
+          MAX_RETRIES=3
+          for i in $(seq 1 $MAX_RETRIES); do
+            if git push; then
+              echo "Push successful"
+              exit 0
+            fi
+            echo "Push failed, retrying ($i/$MAX_RETRIES)..."
+            git pull --rebase
+          done
+          
+          echo "Failed to push after $MAX_RETRIES retries"
+          exit 1

@@ -1,0 +1,14 @@
+# Build output
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+*~
+
+# Local daily logs (in small repos)
+TODAY.md

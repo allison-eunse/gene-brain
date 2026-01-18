@@ -1,0 +1,64 @@
+{
+  "projects": [
+    {
+      "key": "allison-eunse__TBD",
+      "display_name": "Gene-Brain CCA & Prediction",
+      "member": "유은서",
+      "component": "Gene-Brain CCA & Prediction",
+      "owner": "allison-eunse",
+      "repo": "TBD"
+    },
+    {
+      "key": "leee4321__TBD",
+      "display_name": "LLM-based Evaluation",
+      "member": "이은지, 곽수지",
+      "component": "LLM-based Evaluation",
+      "owner": "leee4321",
+      "additional_owners": ["sujigwak"],
+      "repo": "TBD"
+    },
+    {
+      "key": "syunchoi__TBD",
+      "display_name": "Genomic-Conditional Diffusion",
+      "member": "최승연, 민정윤",
+      "component": "Genomic-Conditional Diffusion",
+      "owner": "syunchoi",
+      "repo": "TBD"
+    },
+    {
+      "key": "cykim-saihst__TBD",
+      "display_name": "Genomic FM",
+      "member": "김채연",
+      "component": "Genomic FM",
+      "owner": "cykim-saihst",
+      "repo": "TBD"
+    },
+    {
+      "key": "ssikssikhan-cho__TBD",
+      "display_name": "Gene-Text",
+      "member": "조은수",
+      "component": "Gene-Text",
+      "owner": "ssikssikhan-cho",
+      "repo": "TBD"
+    },
+    {
+      "key": "Shunamo__TBD",
+      "display_name": "Proteomics Adapter",
+      "member": "김수현",
+      "component": "Proteomics Adapter",
+      "owner": "Shunamo",
+      "repo": "TBD"
+    }
+  ],
+  
+  "_members": {
+    "_comment": "GitHub username → Korean name mapping (for reference)",
+    "allison-eunse": "유은서",
+    "leee4321": "이은지",
+    "sujigwak": "곽수지",
+    "syunchoi": "최승연",
+    "cykim-saihst": "김채연",
+    "ssikssikhan-cho": "조은수",
+    "Shunamo": "김수현"
+  }
+}

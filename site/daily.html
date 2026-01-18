@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Logs — Gene-Brain</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Gene-Brain</a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="commits.html" class="nav-link">Commits</a>
+        <a href="daily.html" class="nav-link active">Daily Logs</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <header class="page-header">
+      <h1 class="page-title">Daily Logs</h1>
+      <p class="page-subtitle">End-of-day summaries from team members</p>
+    </header>
+
+    <div class="refresh-bar">
+      <button id="refreshBtn" class="refresh-btn">Refresh</button>
+      <span id="lastUpdated" class="last-updated">Last updated: —</span>
+      <span class="auto-refresh-note">Auto-refresh: daily at 18:00 KST</span>
+    </div>
+
+    <div id="dailyContainer" class="daily-list">
+      <div class="loading">Loading daily logs...</div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    Multimodal Gene-Brain Integration Project
+  </footer>
+
+  <script src="js/daily.js"></script>
+</body>
+</html>
