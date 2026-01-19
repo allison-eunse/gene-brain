@@ -75,23 +75,28 @@ function getProjectInfo(projects, key) {
 async function loadCommits(key) {
   try {
     const resp = await fetch(`data/${key}/commits.json`);
-    if (!resp.ok) return null;
+    if (!resp.ok) {
+      console.warn(`Failed to fetch commits.json for ${key}: ${resp.status}`);
+      return null;
+    }
     const data = await resp.json();
     
     // Handle backward compatibility: if data is an array (old format), normalize it
     if (Array.isArray(data)) {
-      return {
+      const normalized = {
         commits: data.map(commit => ({
           sha_short: commit.sha || commit.sha_short || '—',
           message: commit.message || '',
           committed_at: commit.timestamp || commit.committed_at || ''
         }))
       };
+      console.log(`Normalized old format for ${key}: ${normalized.commits.length} commits`);
+      return normalized;
     }
     
     // New format: ensure commits array exists and normalize field names
     if (data.commits && Array.isArray(data.commits)) {
-      return {
+      const normalized = {
         ...data,
         commits: data.commits.map(commit => ({
           sha_short: commit.sha_short || commit.sha || '—',
@@ -99,11 +104,14 @@ async function loadCommits(key) {
           committed_at: commit.committed_at || commit.timestamp || ''
         }))
       };
+      console.log(`Normalized new format for ${key}: ${normalized.commits.length} commits`);
+      return normalized;
     }
     
-    return data;
+    console.warn(`Unexpected data format for ${key}:`, data);
+    return { commits: [] };
   } catch (err) {
-    console.warn(`No commits for ${key}:`, err);
+    console.error(`Error loading commits for ${key}:`, err);
     return null;
   }
 }
@@ -138,11 +146,14 @@ function renderCommitCard(project, commitsData) {
   const body = document.createElement('div');
   body.className = 'commit-card-body';
   
-  if (!commitsData || !commitsData.commits || commitsData.commits.length === 0) {
+  // Handle both normalized format and edge cases
+  const commits = commitsData?.commits || (Array.isArray(commitsData) ? commitsData : []);
+  
+  if (!commits || commits.length === 0) {
     body.innerHTML = '<div class="commit-card-empty">No commits yet</div>';
   } else {
-    const commits = commitsData.commits.slice(0, MAX_COMMITS_DISPLAY);
-    commits.forEach(commit => {
+    const commitsToShow = commits.slice(0, MAX_COMMITS_DISPLAY);
+    commitsToShow.forEach(commit => {
       const item = document.createElement('div');
       item.className = 'commit-item';
       item.innerHTML = `
