@@ -76,7 +76,32 @@ async function loadCommits(key) {
   try {
     const resp = await fetch(`data/${key}/commits.json`);
     if (!resp.ok) return null;
-    return await resp.json();
+    const data = await resp.json();
+    
+    // Handle backward compatibility: if data is an array (old format), normalize it
+    if (Array.isArray(data)) {
+      return {
+        commits: data.map(commit => ({
+          sha_short: commit.sha || commit.sha_short || '—',
+          message: commit.message || '',
+          committed_at: commit.timestamp || commit.committed_at || ''
+        }))
+      };
+    }
+    
+    // New format: ensure commits array exists and normalize field names
+    if (data.commits && Array.isArray(data.commits)) {
+      return {
+        ...data,
+        commits: data.commits.map(commit => ({
+          sha_short: commit.sha_short || commit.sha || '—',
+          message: commit.message || '',
+          committed_at: commit.committed_at || commit.timestamp || ''
+        }))
+      };
+    }
+    
+    return data;
   } catch (err) {
     console.warn(`No commits for ${key}:`, err);
     return null;
