@@ -1,0 +1,22 @@
+{
+  "owner": "cykim-saihst",
+  "repo": "arpa-hackathone",
+  "updated_at": "2026-01-19T07:23:24Z",
+  "commits": [
+    {
+      "sha_short": "e419fca",
+      "message": "Add workflow to sync commits to central hub",
+      "committed_at": "2026-01-19T16:23:15+09:00"
+    },
+    {
+      "sha_short": "f6b48eb",
+      "message": "chore: add commit sync workflow",
+      "committed_at": "2026-01-19T03:28:31Z"
+    },
+    {
+      "sha_short": "e4b55f3",
+      "message": "init: first commit",
+      "committed_at": "2026-01-19T02:18:40Z"
+    }
+  ]
+}
