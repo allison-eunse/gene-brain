@@ -53,10 +53,13 @@ function getProjectInfo(projects, key) {
   }
   
   if (ownerMatch) {
+    // If the project had "TBD" as repo, replace it with the actual repo name
+    const actualRepo = (ownerMatch.repo === 'TBD' || !ownerMatch.repo) ? repo : ownerMatch.repo;
+    
     return {
       ...ownerMatch,
       key,
-      repo,
+      repo: actualRepo,
       display_name: ownerMatch.display_name,
       member: ownerMatch.member
     };
@@ -137,9 +140,13 @@ function renderCommitCard(project, commitsData) {
   
   const header = document.createElement('div');
   header.className = 'commit-card-header';
+  // Extract repo name from key if repo is TBD or missing
+  const displayRepo = (project.repo && project.repo !== 'TBD') 
+    ? project.repo 
+    : (project.key ? project.key.split('__')[1] || project.key : 'Unknown');
   header.innerHTML = `
     <div class="commit-card-member">${project.member || 'Unknown'}</div>
-    <div class="commit-card-repo">${project.repo || project.key}</div>
+    <div class="commit-card-repo">${displayRepo}</div>
   `;
   card.appendChild(header);
   
