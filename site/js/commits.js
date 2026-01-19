@@ -77,7 +77,8 @@ function getProjectInfo(projects, key) {
 
 async function loadCommits(key) {
   try {
-    const resp = await fetch(`data/${key}/commits.json`);
+    // Add timestamp to prevent caching issues during active debugging
+    const resp = await fetch(`data/${key}/commits.json?t=${Date.now()}`);
     if (!resp.ok) {
       console.warn(`Failed to fetch commits.json for ${key}: ${resp.status}`);
       return null;
@@ -203,15 +204,37 @@ async function refresh() {
       discoverDataKeys()
     ]);
     
-    // Combine: projects.json keys + any discovered keys not already in projects
-    const projectKeys = new Set(projects.map(p => p.key));
-    const allKeys = [...projectKeys];
+    // Consolidate keys:
+    // If we have a discovered key for an owner, use that instead of the placeholder "TBD" key in projects.json
     
+    // Map owner -> discovered key(s)
+    const ownerToDiscoveredKeys = {};
     for (const key of discoveredKeys) {
-      if (!projectKeys.has(key)) {
-        allKeys.push(key);
+      const owner = key.split('__')[0];
+      if (!ownerToDiscoveredKeys[owner]) ownerToDiscoveredKeys[owner] = [];
+      ownerToDiscoveredKeys[owner].push(key);
+    }
+    
+    // Build final list of keys to render
+    const finalKeys = new Set();
+    
+    // 1. Add keys from projects.json (replacing TBDs if discovered)
+    for (const p of projects) {
+      const owner = p.owner;
+      // If this is a TBD project and we found a real key for this owner, use the real key(s)
+      if (p.key.includes('__TBD') && ownerToDiscoveredKeys[owner]) {
+        ownerToDiscoveredKeys[owner].forEach(k => finalKeys.add(k));
+      } else {
+        finalKeys.add(p.key);
       }
     }
+    
+    // 2. Add any remaining discovered keys not yet covered
+    for (const key of discoveredKeys) {
+      finalKeys.add(key);
+    }
+    
+    const allKeys = [...finalKeys];
     
     if (allKeys.length === 0) {
       container.innerHTML = `
