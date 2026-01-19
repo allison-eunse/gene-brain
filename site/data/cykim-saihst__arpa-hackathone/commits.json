@@ -1,8 +1,13 @@
 {
   "owner": "cykim-saihst",
   "repo": "arpa-hackathone",
-  "updated_at": "2026-01-19T08:43:21Z",
+  "updated_at": "2026-01-19T14:16:07Z",
   "commits": [
+    {
+      "sha_short": "ad2fcb7",
+      "message": "update: add mdd/cognitive dataset generation pipelines",
+      "committed_at": "2026-01-19T14:11:13Z"
+    },
     {
       "sha_short": "35d2df9",
       "message": "update: data alignment and dataset generation",
