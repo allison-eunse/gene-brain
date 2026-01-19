@@ -11,10 +11,10 @@
     {
       "key": "leee4321__TBD",
       "display_name": "LLM-based Evaluation",
-      "member": "이은지, 곽수지",
+      "member": "이은지, 곽수지, 손혜령",
       "component": "LLM-based Evaluation",
       "owner": "leee4321",
-      "additional_owners": ["sujigwak"],
+      "additional_owners": ["sujigwak", "hayleyson"],
       "repo": "TBD"
     },
     {
@@ -56,6 +56,7 @@
     "allison-eunse": "유은서",
     "leee4321": "이은지",
     "sujigwak": "곽수지",
+    "hayleyson": "손혜령",
     "syunchoi": "최승연",
     "cykim-saihst": "김채연",
     "ssikssikhan-cho": "조은수",

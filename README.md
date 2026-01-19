@@ -11,6 +11,14 @@ This repository serves as the **central tracking hub** for the Multimodal Gene-B
 
 The GitHub Pages site provides a single view of all team activity.
 
+## Live Dashboard
+
+🔗 **[View the Gene-Brain Hub](https://allison-eunse.github.io/gene-brain/)**
+
+- **[Home](https://allison-eunse.github.io/gene-brain/)** — Project overview & team roster
+- **[Commits](https://allison-eunse.github.io/gene-brain/commits.html)** — Latest commits from all team repositories
+- **[Daily Logs](https://allison-eunse.github.io/gene-brain/daily.html)** — End-of-day summaries
+
 ## Project Goal
 
 We aim to construct a unified representation connecting:
@@ -25,7 +33,7 @@ within a shared latent space that is predictive, generative, and interpretable.
 | Research Component | Member(s) | GitHub | Key Responsibility |
 |---|---|---|---|
 | Gene-Brain CCA & Prediction | 유은서 | allison-eunse | CCA between Gene FM embeddings and brain data; pilot regression for cognitive decline |
-| LLM-based Evaluation | 이은지, 곽수지 | leee4321, sujigwak | Pipeline for interpreting CCA results via fine-tuned LLM |
+| LLM-based Evaluation | 이은지, 곽수지, 손혜령 | leee4321, sujigwak, hayleyson | Pipeline for interpreting CCA results via fine-tuned LLM |
 | Genomic-Conditional Diffusion | 최승연, 민정윤 | syunchoi | Pilot diffusion model conditioned on genomic embeddings for brain image generation |
 | Genomic FM | 김채연 | cykim-saihst | Gene region parsing for cognitive decline; regression with genomic embeddings |
 | Gene-Text | 조은수 | ssikssikhan-cho | Training pipeline aligning DNA FM embeddings with LLM embeddings (NCBI/UniProt) |
