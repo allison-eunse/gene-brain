@@ -1,8 +1,13 @@
 {
   "owner": "allison-eunse",
   "repo": "gene-brain-CCA",
-  "updated_at": "2026-01-19T05:11:11Z",
+  "updated_at": "2026-01-19T05:36:13Z",
   "commits": [
+    {
+      "sha_short": "5cc9fa3",
+      "message": "Soften fMRI claims in documentation",
+      "committed_at": "2026-01-19T05:36:13Z"
+    },
     {
       "sha_short": "21768a2",
       "message": "chore: emit new commits.json schema for central UI",
