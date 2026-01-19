@@ -1,72 +1,82 @@
-[
-  {
-    "sha": "855ee57",
-    "message": "fix: robust default-branch detection for central sync",
-    "timestamp": "2026-01-19T04:56:40Z"
-  },
-  {
-    "sha": "b6d7d49",
-    "message": "feat: add Schaefer17 DMN/Sal/Limbic + Schaefer7 summary artifacts",
-    "timestamp": "2026-01-19T04:32:09Z"
-  },
-  {
-    "sha": "6fc161c",
-    "message": "chore: add commit sync workflow to central hub",
-    "timestamp": "2026-01-19T04:14:50Z"
-  },
-  {
-    "sha": "b45f675",
-    "message": "docs: Add QUICKSTART, INDEX, CHANGELOG for main project",
-    "timestamp": "2026-01-14T07:30:32Z"
-  },
-  {
-    "sha": "f6cfe3b",
-    "message": "docs: Update RESULTS_GUIDE, CHANGELOG, and INDEX with actual results",
-    "timestamp": "2026-01-14T07:27:07Z"
-  },
-  {
-    "sha": "9a52725",
-    "message": "docs: Update READMEs with comprehensive results and scientific conclusions",
-    "timestamp": "2026-01-14T07:24:13Z"
-  },
-  {
-    "sha": "50d364c",
-    "message": "Add comprehensive analysis results and final reports",
-    "timestamp": "2026-01-14T00:03:02Z"
-  },
-  {
-    "sha": "ed0bd36",
-    "message": "Add max pooling results and reorganize derived outputs",
-    "timestamp": "2026-01-13T07:48:58Z"
-  },
-  {
-    "sha": "6718d41",
-    "message": "Add derived CCA outputs",
-    "timestamp": "2026-01-13T02:50:40Z"
-  },
-  {
-    "sha": "ff98627",
-    "message": "Fix conda env path: use shared /scratch location for cross-node access",
-    "timestamp": "2026-01-12T09:19:48Z"
-  },
-  {
-    "sha": "c687b9f",
-    "message": "Stop creating conda env in full pipeline; just activate prebuilt cca_env",
-    "timestamp": "2026-01-12T16:37:25+09:00"
-  },
-  {
-    "sha": "8d54ab4",
-    "message": "Fix pipeline for lab server: node2, cca_env, paths, labels alignment, end-to-end script",
-    "timestamp": "2026-01-12T16:05:58+09:00"
-  },
-  {
-    "sha": "cac9d94",
-    "message": "Add two-stage CCA/SCCA pipeline",
-    "timestamp": "2026-01-08T10:04:53+09:00"
-  },
-  {
-    "sha": "b5c6e11",
-    "message": "Initial commit",
-    "timestamp": "2025-12-22T09:35:46+09:00"
-  }
-]
+{
+  "owner": "allison-eunse",
+  "repo": "gene-brain-CCA",
+  "updated_at": "2026-01-19T05:11:11Z",
+  "commits": [
+    {
+      "sha_short": "21768a2",
+      "message": "chore: emit new commits.json schema for central UI",
+      "committed_at": "2026-01-19T05:11:11Z"
+    },
+    {
+      "sha_short": "855ee57",
+      "message": "fix: robust default-branch detection for central sync",
+      "committed_at": "2026-01-19T04:56:40Z"
+    },
+    {
+      "sha_short": "b6d7d49",
+      "message": "feat: add Schaefer17 DMN/Sal/Limbic + Schaefer7 summary artifacts",
+      "committed_at": "2026-01-19T04:32:09Z"
+    },
+    {
+      "sha_short": "6fc161c",
+      "message": "chore: add commit sync workflow to central hub",
+      "committed_at": "2026-01-19T04:14:50Z"
+    },
+    {
+      "sha_short": "b45f675",
+      "message": "docs: Add QUICKSTART, INDEX, CHANGELOG for main project",
+      "committed_at": "2026-01-14T07:30:32Z"
+    },
+    {
+      "sha_short": "f6cfe3b",
+      "message": "docs: Update RESULTS_GUIDE, CHANGELOG, and INDEX with actual results",
+      "committed_at": "2026-01-14T07:27:07Z"
+    },
+    {
+      "sha_short": "9a52725",
+      "message": "docs: Update READMEs with comprehensive results and scientific conclusions",
+      "committed_at": "2026-01-14T07:24:13Z"
+    },
+    {
+      "sha_short": "50d364c",
+      "message": "Add comprehensive analysis results and final reports",
+      "committed_at": "2026-01-14T00:03:02Z"
+    },
+    {
+      "sha_short": "ed0bd36",
+      "message": "Add max pooling results and reorganize derived outputs",
+      "committed_at": "2026-01-13T07:48:58Z"
+    },
+    {
+      "sha_short": "6718d41",
+      "message": "Add derived CCA outputs",
+      "committed_at": "2026-01-13T02:50:40Z"
+    },
+    {
+      "sha_short": "ff98627",
+      "message": "Fix conda env path: use shared /scratch location for cross-node access",
+      "committed_at": "2026-01-12T09:19:48Z"
+    },
+    {
+      "sha_short": "c687b9f",
+      "message": "Stop creating conda env in full pipeline; just activate prebuilt cca_env",
+      "committed_at": "2026-01-12T16:37:25+09:00"
+    },
+    {
+      "sha_short": "8d54ab4",
+      "message": "Fix pipeline for lab server: node2, cca_env, paths, labels alignment, end-to-end script",
+      "committed_at": "2026-01-12T16:05:58+09:00"
+    },
+    {
+      "sha_short": "cac9d94",
+      "message": "Add two-stage CCA/SCCA pipeline",
+      "committed_at": "2026-01-08T10:04:53+09:00"
+    },
+    {
+      "sha_short": "b5c6e11",
+      "message": "Initial commit",
+      "committed_at": "2025-12-22T09:35:46+09:00"
+    }
+  ]
+}
