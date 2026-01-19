@@ -1,0 +1,122 @@
+{
+  "owner": "Shunamo",
+  "repo": "proteomics-encoder",
+  "updated_at": "2026-01-19T08:09:11Z",
+  "commits": [
+    {
+      "sha_short": "fb41e96",
+      "message": "chore: update sync workflow to use x-access-token format",
+      "committed_at": "2026-01-19T08:08:36Z"
+    },
+    {
+      "sha_short": "5c4b9b5",
+      "message": "fix: add token validation and quote URL in git clone",
+      "committed_at": "2026-01-19T07:58:18Z"
+    },
+    {
+      "sha_short": "767becf",
+      "message": "fix: add token to git push remote URL",
+      "committed_at": "2026-01-19T07:57:06Z"
+    },
+    {
+      "sha_short": "0177282",
+      "message": "fix: use BIG_REPO_TOKEN env var name in workflow",
+      "committed_at": "2026-01-19T07:56:40Z"
+    },
+    {
+      "sha_short": "c3fb254",
+      "message": "chore: update commit sync workflow to match central repo schema (50 commits, JSON format)",
+      "committed_at": "2026-01-19T07:53:41Z"
+    },
+    {
+      "sha_short": "5a3cc7e",
+      "message": "chore: setup central repo sync (GitHub Actions workflow and daily log publisher)",
+      "committed_at": "2026-01-19T07:30:13Z"
+    },
+    {
+      "sha_short": "073c782",
+      "message": "feat: add data splitting script",
+      "committed_at": "2026-01-19T07:20:10Z"
+    },
+    {
+      "sha_short": "46265ee",
+      "message": "feat: add STRING DB parser for PPI network extraction",
+      "committed_at": "2026-01-19T07:19:59Z"
+    },
+    {
+      "sha_short": "90b81cb",
+      "message": "feat: add graph data loader for PPI network and proteomics integration",
+      "committed_at": "2026-01-19T07:19:55Z"
+    },
+    {
+      "sha_short": "6001954",
+      "message": "feat: add UKB data loader",
+      "committed_at": "2026-01-19T07:19:49Z"
+    },
+    {
+      "sha_short": "d7d2c8c",
+      "message": "feat: add src & data module",
+      "committed_at": "2026-01-19T07:19:28Z"
+    },
+    {
+      "sha_short": "e546006",
+      "message": "feat: add GNN-SubNet explanation and subnetwork detection script",
+      "committed_at": "2026-01-19T07:19:04Z"
+    },
+    {
+      "sha_short": "565857e",
+      "message": "feat: add GNN-SubNet training pipeline script",
+      "committed_at": "2026-01-19T07:18:58Z"
+    },
+    {
+      "sha_short": "7063eef",
+      "message": "feat: add community detection for disease subnetwork discovery",
+      "committed_at": "2026-01-19T07:18:48Z"
+    },
+    {
+      "sha_short": "1ac3e54",
+      "message": "feat: add GNN explainer for model-wide explanations",
+      "committed_at": "2026-01-19T07:18:44Z"
+    },
+    {
+      "sha_short": "a55e67a",
+      "message": "feat: add graph classifier model for dementia prediction",
+      "committed_at": "2026-01-19T07:18:37Z"
+    },
+    {
+      "sha_short": "6cc36e6",
+      "message": "feat: add GIN model implementation for gnn",
+      "committed_at": "2026-01-19T07:18:33Z"
+    },
+    {
+      "sha_short": "8cb6deb",
+      "message": "feat: add view_gnn source code initialization",
+      "committed_at": "2026-01-19T07:18:23Z"
+    },
+    {
+      "sha_short": "20dff39",
+      "message": "feat: add ProtRS build script (age-based ElasticNet runner)",
+      "committed_at": "2026-01-19T07:17:18Z"
+    },
+    {
+      "sha_short": "672a012",
+      "message": "feat: add ProtRS analyzer module",
+      "committed_at": "2026-01-19T07:17:14Z"
+    },
+    {
+      "sha_short": "3bc19d5",
+      "message": "feat: add ProtRS age-based builder module (ElasticNet for age prediction)",
+      "committed_at": "2026-01-19T07:17:10Z"
+    },
+    {
+      "sha_short": "f0ca101",
+      "message": "feat: add ProtRS paper method script (Cox LASSO with 10-fold CV and 1SE rule)",
+      "committed_at": "2026-01-19T07:17:05Z"
+    },
+    {
+      "sha_short": "0fd50b4",
+      "message": "feat: add view_protrs source code",
+      "committed_at": "2026-01-19T07:16:06Z"
+    }
+  ]
+}
