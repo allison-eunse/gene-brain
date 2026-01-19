@@ -1,0 +1,22 @@
+{
+  "owner": "ssikssikhan-cho",
+  "repo": "Hackathon_gene-embedding-genomics-text",
+  "updated_at": "2026-01-19T08:44:34Z",
+  "commits": [
+    {
+      "sha_short": "2c3fec4",
+      "message": "chore: add commit sync workflow and publish script",
+      "committed_at": "2026-01-19T08:44:26Z"
+    },
+    {
+      "sha_short": "798d7b2",
+      "message": "chore: add commit sync workflow",
+      "committed_at": "2026-01-19T07:29:42Z"
+    },
+    {
+      "sha_short": "a579eca",
+      "message": "Initial commit: gene embedding code for DNA foundation models",
+      "committed_at": "2026-01-19T07:15:11Z"
+    }
+  ]
+}
