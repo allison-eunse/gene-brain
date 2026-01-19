@@ -1,0 +1,72 @@
+[
+  {
+    "sha": "855ee57",
+    "message": "fix: robust default-branch detection for central sync",
+    "timestamp": "2026-01-19T04:56:40Z"
+  },
+  {
+    "sha": "b6d7d49",
+    "message": "feat: add Schaefer17 DMN/Sal/Limbic + Schaefer7 summary artifacts",
+    "timestamp": "2026-01-19T04:32:09Z"
+  },
+  {
+    "sha": "6fc161c",
+    "message": "chore: add commit sync workflow to central hub",
+    "timestamp": "2026-01-19T04:14:50Z"
+  },
+  {
+    "sha": "b45f675",
+    "message": "docs: Add QUICKSTART, INDEX, CHANGELOG for main project",
+    "timestamp": "2026-01-14T07:30:32Z"
+  },
+  {
+    "sha": "f6cfe3b",
+    "message": "docs: Update RESULTS_GUIDE, CHANGELOG, and INDEX with actual results",
+    "timestamp": "2026-01-14T07:27:07Z"
+  },
+  {
+    "sha": "9a52725",
+    "message": "docs: Update READMEs with comprehensive results and scientific conclusions",
+    "timestamp": "2026-01-14T07:24:13Z"
+  },
+  {
+    "sha": "50d364c",
+    "message": "Add comprehensive analysis results and final reports",
+    "timestamp": "2026-01-14T00:03:02Z"
+  },
+  {
+    "sha": "ed0bd36",
+    "message": "Add max pooling results and reorganize derived outputs",
+    "timestamp": "2026-01-13T07:48:58Z"
+  },
+  {
+    "sha": "6718d41",
+    "message": "Add derived CCA outputs",
+    "timestamp": "2026-01-13T02:50:40Z"
+  },
+  {
+    "sha": "ff98627",
+    "message": "Fix conda env path: use shared /scratch location for cross-node access",
+    "timestamp": "2026-01-12T09:19:48Z"
+  },
+  {
+    "sha": "c687b9f",
+    "message": "Stop creating conda env in full pipeline; just activate prebuilt cca_env",
+    "timestamp": "2026-01-12T16:37:25+09:00"
+  },
+  {
+    "sha": "8d54ab4",
+    "message": "Fix pipeline for lab server: node2, cca_env, paths, labels alignment, end-to-end script",
+    "timestamp": "2026-01-12T16:05:58+09:00"
+  },
+  {
+    "sha": "cac9d94",
+    "message": "Add two-stage CCA/SCCA pipeline",
+    "timestamp": "2026-01-08T10:04:53+09:00"
+  },
+  {
+    "sha": "b5c6e11",
+    "message": "Initial commit",
+    "timestamp": "2025-12-22T09:35:46+09:00"
+  }
+]
