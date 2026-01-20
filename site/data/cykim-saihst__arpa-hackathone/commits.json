@@ -1,8 +1,13 @@
 {
   "owner": "cykim-saihst",
   "repo": "arpa-hackathone",
-  "updated_at": "2026-01-20T02:36:35Z",
+  "updated_at": "2026-01-20T03:42:51Z",
   "commits": [
+    {
+      "sha_short": "8a1fb80",
+      "message": "feat: Add experiment comparison notebook and update genomics pipeline",
+      "committed_at": "2026-01-20T03:42:16Z"
+    },
     {
       "sha_short": "3720cc4",
       "message": "feat: Add nesap_genomics_experiment pipeline with multiple models and feature reduction methods",
