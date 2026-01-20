@@ -1,8 +1,13 @@
 {
   "owner": "ssikssikhan-cho",
   "repo": "Hackathon_gene-embedding-genomics-text",
-  "updated_at": "2026-01-19T08:44:34Z",
+  "updated_at": "2026-01-20T13:43:19Z",
   "commits": [
+    {
+      "sha_short": "2c14aa0",
+      "message": "feat: add gene-text multimodal training code",
+      "committed_at": "2026-01-20T13:35:09Z"
+    },
     {
       "sha_short": "2c3fec4",
       "message": "chore: add commit sync workflow and publish script",
