@@ -125,13 +125,35 @@ async function refresh() {
       loadDailyIndex()
     ]);
     
-    // Combine: show all projects, even those without logs
-    const allKeys = new Set([
-      ...projects.map(p => p.key),
-      ...Object.keys(dailyIndex)
-    ]);
+    // Combine and deduplicate: prefer keys with logs, merge TBD placeholders
+    const projectKeys = new Set(projects.map(p => p.key));
+    const dailyKeys = new Set(Object.keys(dailyIndex));
+    const uniqueKeys = new Set();
+    const processedOwners = new Set();
+
+    // 1. First pass: Add all keys that actually have logs
+    for (const key of dailyKeys) {
+      uniqueKeys.add(key);
+      const [owner] = key.split('__');
+      processedOwners.add(owner);
+    }
+
+    // 2. Second pass: Add project placeholders only if we haven't seen a log for this owner
+    //    (This prevents showing "TBD" duplicate if "gene-brain-CCA" already exists)
+    for (const key of projectKeys) {
+      const project = projects.find(p => p.key === key);
+      const owner = project ? project.owner : key.split('__')[0];
+      
+      // If we already added a key for this owner (that has logs), skip the TBD/placeholder
+      if (processedOwners.has(owner)) continue;
+      
+      uniqueKeys.add(key);
+      processedOwners.add(owner);
+    }
     
-    if (allKeys.size === 0) {
+    const allKeys = [...uniqueKeys].sort();
+    
+    if (allKeys.length === 0) {
       container.innerHTML = `
         <div class="empty-state">
           <div class="empty-state-icon">📭</div>
