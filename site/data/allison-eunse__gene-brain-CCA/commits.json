@@ -1,8 +1,18 @@
 {
   "owner": "allison-eunse",
   "repo": "gene-brain-CCA",
-  "updated_at": "2026-01-19T05:36:13Z",
+  "updated_at": "2026-01-21T05:55:40Z",
   "commits": [
+    {
+      "sha_short": "4bdb1c1",
+      "message": "Add tabular v2 CCA pipeline, plots, reports",
+      "committed_at": "2026-01-21T05:55:40Z"
+    },
+    {
+      "sha_short": "7b1a177",
+      "message": "Add Tian QC analysis, new scripts, and daily log (Jan 21, 2026)",
+      "committed_at": "2026-01-20T23:19:54Z"
+    },
     {
       "sha_short": "5cc9fa3",
       "message": "Soften fMRI claims in documentation",
