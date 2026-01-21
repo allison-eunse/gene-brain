@@ -1,0 +1,97 @@
+{
+  "owner": "syunchoi",
+  "repo": "LDMpriv_fin",
+  "updated_at": "2026-01-21T05:37:33Z",
+  "commits": [
+    {
+      "sha_short": "0f7be16",
+      "message": "Add training scripts",
+      "committed_at": "2026-01-21T05:33:21Z"
+    },
+    {
+      "sha_short": "6958057",
+      "message": "Resolve conflict: keep local README",
+      "committed_at": "2026-01-20T03:19:34Z"
+    },
+    {
+      "sha_short": "36c7ea2",
+      "message": "chore: add commit sync workflow",
+      "committed_at": "2026-01-20T03:12:32Z"
+    },
+    {
+      "sha_short": "2711bc9",
+      "message": "Add files via upload",
+      "committed_at": "2026-01-19T17:07:00+09:00"
+    },
+    {
+      "sha_short": "9e98c0f",
+      "message": "Add 261109_report.md",
+      "committed_at": "2026-01-19T08:04:34Z"
+    },
+    {
+      "sha_short": "73a2b0c",
+      "message": "revise evaluation points(LDM) and genearte evaluation at best ckpt(AE)",
+      "committed_at": "2026-01-17T07:14:32Z"
+    },
+    {
+      "sha_short": "cfac260",
+      "message": "change readme",
+      "committed_at": "2026-01-16T17:38:43+09:00"
+    },
+    {
+      "sha_short": "e218bb4",
+      "message": "Initial commit: BrLP pipeline scripts and core modules",
+      "committed_at": "2026-01-16T08:34:11Z"
+    },
+    {
+      "sha_short": "ac50894",
+      "message": "Add MS-SSIM diversity metric to VAE-GAN evaluation",
+      "committed_at": "2025-10-30T12:21:40Z"
+    },
+    {
+      "sha_short": "0f6e316",
+      "message": "VAE-GAN loss function guide and how to find best checkpoint",
+      "committed_at": "2025-10-30T12:13:48Z"
+    },
+    {
+      "sha_short": "636b82f",
+      "message": "Add files via upload",
+      "committed_at": "2025-10-29T15:14:53+09:00"
+    },
+    {
+      "sha_short": "021337a",
+      "message": "Merge branch 'main' of github.com:syunchoi/LDM_private into main",
+      "committed_at": "2025-10-29T05:45:45Z"
+    },
+    {
+      "sha_short": "0f474c7",
+      "message": "VAE-GAN baseline model for LDM",
+      "committed_at": "2025-10-29T05:44:04Z"
+    },
+    {
+      "sha_short": "78af6b5",
+      "message": "FID study research report",
+      "committed_at": "2025-10-27T17:07:38+09:00"
+    },
+    {
+      "sha_short": "74f9244",
+      "message": "Add within-individual brain change analysis",
+      "committed_at": "2025-10-24T07:51:51Z"
+    },
+    {
+      "sha_short": "1214c46",
+      "message": "Merge branch 'main' of github.com:syunchoi/LDM_private into main",
+      "committed_at": "2025-10-22T12:07:36Z"
+    },
+    {
+      "sha_short": "a2afaad",
+      "message": "Add training scripts for conditional testing and controlnet",
+      "committed_at": "2025-10-22T11:54:31Z"
+    },
+    {
+      "sha_short": "7d45f85",
+      "message": "Initial commit",
+      "committed_at": "2025-10-22T19:09:12+09:00"
+    }
+  ]
+}
