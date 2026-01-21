@@ -1,8 +1,13 @@
 {
   "owner": "cykim-saihst",
   "repo": "arpa-hackathone",
-  "updated_at": "2026-01-20T17:13:22Z",
+  "updated_at": "2026-01-21T06:12:43Z",
   "commits": [
+    {
+      "sha_short": "8380672",
+      "message": "Ignore pycache and update notebooks",
+      "committed_at": "2026-01-21T06:12:14Z"
+    },
     {
       "sha_short": "f9e2e5b",
       "message": "Update experiment comparison and add MCC calculation",
