@@ -1,8 +1,13 @@
 {
   "owner": "syunchoi",
   "repo": "LDMpriv_fin",
-  "updated_at": "2026-01-21T11:12:27Z",
+  "updated_at": "2026-01-21T11:14:20Z",
   "commits": [
+    {
+      "sha_short": "ac1e9ed",
+      "message": "Move PIPELINE_ANALYSIS_UKB.md to scripts/training/",
+      "committed_at": "2026-01-21T11:14:09Z"
+    },
     {
       "sha_short": "065bb6e",
       "message": "Add UKB pipeline analysis documentation Documents the UKB Brain LDM pipeline with gene embedding (SOD2) conditioning.",
