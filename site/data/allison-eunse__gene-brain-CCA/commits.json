@@ -1,8 +1,13 @@
 {
   "owner": "allison-eunse",
   "repo": "gene-brain-CCA",
-  "updated_at": "2026-01-28T00:47:26Z",
+  "updated_at": "2026-01-28T01:05:20Z",
   "commits": [
+    {
+      "sha_short": "6b60180",
+      "message": "docs: Update Future Directions with completed Phase 3 work",
+      "committed_at": "2026-01-28T01:05:20Z"
+    },
     {
       "sha_short": "d1aa2b2",
       "message": "docs: Update READMEs with Phase 3 stratified analysis results",
