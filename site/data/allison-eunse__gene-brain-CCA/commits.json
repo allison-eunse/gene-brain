@@ -1,8 +1,13 @@
 {
   "owner": "allison-eunse",
   "repo": "gene-brain-CCA",
-  "updated_at": "2026-01-22T08:11:10Z",
+  "updated_at": "2026-01-28T00:40:55Z",
   "commits": [
+    {
+      "sha_short": "2481c1e",
+      "message": "Add stratified FM analysis, sMRI/dMRI prediction, and analysis reports",
+      "committed_at": "2026-01-28T00:40:55Z"
+    },
     {
       "sha_short": "851e050",
       "message": "Add Phase 3 benchmark with disk caching and checkpointing",
